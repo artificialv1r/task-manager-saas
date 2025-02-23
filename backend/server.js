@@ -156,6 +156,17 @@ app.post("/tasks", verifyToken, async (req, res) => {
   }
 });
 
+// backend/server.js
+app.get("/api/tasks", async (req, res) => {
+  try {
+    const result = await db.query("SELECT * FROM tasks"); // Proveri da li ti tabela tasks postoji
+    res.json(result.rows);
+  } catch (error) {
+    console.error("Error fetching tasks:", error);
+    res.status(500).json({ message: "Server error" });
+  }
+});
+
 // Pokretanje servera
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
