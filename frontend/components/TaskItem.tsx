@@ -7,14 +7,14 @@ interface Task {
 }
 
 interface TaskItemProps {
-  task: Task; // Očekuje se prop 'task'
+  task: Task;
 }
 
 const TaskItem: React.FC<TaskItemProps> = ({ task }) => {
   return (
-    <div>
-      <h3>{task.title}</h3>
-      <p>{task.description}</p>
+    <div className="bg-white shadow-md rounded-lg p-4 mb-4">
+      <h3 className="text-xl font-bold mb-2">{task.title}</h3>
+      <p className="text-gray-700">{task.description}</p>
     </div>
   );
 };
