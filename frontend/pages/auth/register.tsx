@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useRouter } from "next/router";
+import "../../app/globals.css";
 
 const Register = () => {
   const [username, setUsername] = useState("");
@@ -31,12 +32,14 @@ const Register = () => {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen">
+    <div className="flex justify-center items-center min-h-screen ">
       <form
         onSubmit={handleSubmit}
-        className="p-8 bg-white shadow-md rounded-md"
+        className="p-8 bg-white shadow-md rounded-md flex flex-col"
       >
-        <h2 className="text-xl mb-4">Registruj se</h2>
+        <h2 className="text-xl mb-4 font-extrabold text-[#007AFF] text-center">
+          Registruj se!
+        </h2>
 
         <input
           type="text"

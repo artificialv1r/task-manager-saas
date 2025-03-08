@@ -2,39 +2,24 @@ import React from "react";
 
 const Header: React.FC = () => {
   return (
-    <header className="bg-[#196B69] text-white p-4 flex justify-evenly items-center">
-      <div className="flex items-center">
-        {/* <img src="/logo.png" alt="Logo" className="h-8 w-8 mr-2" /> */}
-        <h1 className="text-2xl">My Task Manager</h1>
-      </div>
-      <nav className="flex space-x-4 rounded-full w-[400px] items-center justify-center bg-white text-[#196B69] font-bold p-2">
-        <a href="/" className="hover:underline">
+    <header className="bg-[#007AFF] text-white p-4 flex justify-center items-center shadow-lg">
+      <nav className="flex space-x-8 rounded-full w-[600px] items-center justify-center bg-white text-[#007AFF] font-bold p-2 shadow-lg">
+        <a href="/" className="hover:color-[#0060C9]">
           Home
         </a>
-        <a href="/tasks" className="hover:underline">
+        <a href="/tasks" className="hover:color-[#0060C9]">
           Tasks
         </a>
-        <a href="/about" className="hover:underline">
+        <a href="/about" className="hover:color-[#0060C9]">
           About
         </a>
+        <a href="/auth/login" className="hover:color-[#0060C9]">
+          Login
+        </a>
+        <a href="/auth/register" className="hover:color-[#0060C9]">
+          Register
+        </a>
       </nav>
-      <div className="flex gap-4">
-        <p>
-          <a
-            className="p-1 font-bold border-b-2 border-transparent hover:text-black hover:border-black transition-all duration-300"
-            href="/auth/login"
-          >
-            Login
-          </a>{" "}
-          /{" "}
-          <a
-            className="p-1 font-bold border-b-2 border-transparent hover:text-black hover:border-black transition-all duration-300"
-            href="/auth/register"
-          >
-            Register
-          </a>
-        </p>
-      </div>
     </header>
   );
 };
