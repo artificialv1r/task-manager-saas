@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useRouter } from "next/router";
 import "../../app/globals.css";
 
-const Register = () => {
+const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -10,7 +10,7 @@ const Register = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const res = await fetch("/api/auth/register", {
+    const res = await fetch("/api/auth/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -25,7 +25,7 @@ const Register = () => {
 
     if (res.ok) {
       localStorage.setItem("token", data.token);
-      router.push("/auth/login");
+      router.push("/");
     } else {
       setError(data.message);
     }
@@ -38,7 +38,7 @@ const Register = () => {
         className="p-8 bg-white shadow-md rounded-md flex flex-col"
       >
         <h2 className="text-xl mb-4 font-extrabold text-[#007AFF] text-center">
-          Registruj se!
+          Uloguj se!
         </h2>
 
         <input
@@ -63,10 +63,10 @@ const Register = () => {
           type="submit"
           className="w-full py-2 bg-blue-500 text-white rounded"
         >
-          Registruj Se
+          Uloguj Se
         </button>
       </form>
     </div>
   );
 };
-export default Register;
+export default Login;
