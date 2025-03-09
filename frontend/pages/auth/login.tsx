@@ -25,7 +25,7 @@ const Login = () => {
 
     if (res.ok) {
       localStorage.setItem("token", data.token);
-      router.push("/");
+      router.push("/dashboard");
     } else {
       setError(data.message);
     }
