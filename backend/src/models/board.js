@@ -16,6 +16,18 @@ const boardModel = {
     ]);
     return result.rows;
   },
+
+  softDelete: async (boardId, userId) => {
+    const result = await db.query(
+      "UPDATE boards SET is_deleted = TRUE WHERE id = $1 AND user_id = $2 RETURNING *",
+      [boardId, userId]
+    );
+
+    if (result.rows.length === 0) {
+      throw new Error("Tabla nije pronađena ili nemate mogucnost brisanja");
+    }
+    return result.rows[0];
+  },
 };
 
 module.exports = boardModel;

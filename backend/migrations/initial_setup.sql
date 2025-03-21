@@ -5,6 +5,7 @@ CREATE TABLE users (
   password VARCHAR(255) NOT NULL,
   role VARCHAR(50) DEFAULT 'user',
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+  is_deleted BOOLEAN DEFAULT FALSE
 );
 
 -- Kreiranje tabele za tablu
@@ -13,6 +14,7 @@ CREATE TABLE boards (
   title VARCHAR(100) NOT NULL,
   user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+  is_deleted BOOLEAN DEFAULT FALSE
 );
 
 -- Kreiranje tabele za liste
@@ -21,6 +23,7 @@ CREATE TABLE lists (
   title VARCHAR(100) NOT NULL,
   board_id INTEGER REFERENCES boards(id) ON DELETE CASCADE,
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+  is_deleted BOOLEAN DEFAULT FALSE
 );
 
 -- Kreiranje tabele za zadatke
@@ -31,5 +34,6 @@ CREATE TABLE tasks (
   list_id INTEGER REFERENCES lists(id) ON DELETE CASCADE,
   user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
   is_completed BOOLEAN DEFAULT FALSE,
-  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  is_deleted BOOLEAN DEFAULT FALSE
 );
