@@ -23,7 +23,7 @@ const Dashboard: React.FC = () => {
     }
 
     return (
-        <div className="p-6">
+        <div className="h-[95dvh] w-[90dvw] bg-white m-4 p-4 rounded-[20px] shadow-md">
             <h1 className="text-2xl font-bold mb-4">Welcome to Your Dashboard</h1>
             {/* Dashboard content goes here */}
         </div>

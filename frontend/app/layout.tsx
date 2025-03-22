@@ -16,7 +16,7 @@ const Layout = ({ children }: LayoutProps) => {
   return (
     <html lang="en">
       <head></head>
-      <body className="flex ">
+      <body className="flex overflow-hidden">
         <Sidebar />
         <main className="">
           <section className="max-h-screen flex justify-center items-center ">

@@ -30,7 +30,7 @@ const Sidebar: React.FC = () => {
   ];
 
   return (
-    <aside className="bg-[#1E1E1E] text-white flex flex-col w-20 h-[95dvh] justify-between m-4 p-4 rounded-[20px] shadow-lg md:w-[120px]">
+    <aside className="bg-[#1E1E1E] text-white flex flex-col w-20 h-[95dvh] justify-between m-4 p-4 rounded-[20px] shadow-lg md:w-[100px]">
       <button
         onClick={() => router.push("/auth/profile")}
         className="flex flex-col items-center space-x-3 p-2 bg-transparent hover:bg-[#2E2E2E] rounded-lg transition"
