@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import Header from "../components/Header";
+import Header from "../components/SidebarMenu";
 import Footer from "../components/Footer";
 import "../app/globals.css";
 

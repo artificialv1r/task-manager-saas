@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 body {
-  @apply bg-[#0060C9] text-white font-sans;
+  @apply bg-[#F3F3F3] text-[#1E1E1E] font-sans;
 }
 
 h1 {

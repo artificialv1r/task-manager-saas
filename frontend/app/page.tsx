@@ -16,12 +16,12 @@ const Home: React.FC = () => {
             In order to test the application, I would kindly ask you to first register your account and then log in.
             </p>
             <Link href="/auth/login">
-              <button className="bg-[#007AFF] text-white font-bold shadow-md rounded-md p-2 hover:bg-[#0060C9] w-[200px]">
+              <button className="bg-[#1E1E1E] text-white font-bold shadow-md rounded-md p-2 hover:bg-[#0060C9] w-[200px]">
                 Login
               </button>
             </Link>
             <Link href="/auth/register">
-            <button className="bg-[#007AFF] text-white font-bold shadow-md rounded-md p-2 hover:bg-[#0060C9] w-[200px]">
+            <button className="bg-[#1E1E1E] text-white font-bold shadow-md rounded-md p-2 hover:bg-[#0060C9] w-[200px]">
               Register
             </button>
             </Link>
